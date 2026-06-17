@@ -26,6 +26,13 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Rogue | Components")
+	TObjectPtr<class USpringArmComponent> SpringArmComponet{ nullptr };
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Rogue | Components")
+	TObjectPtr<class UCameraComponent> CameraComponent{ nullptr };
+
+
 private:
 
 	
