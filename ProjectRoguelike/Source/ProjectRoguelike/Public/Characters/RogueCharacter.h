@@ -32,6 +32,16 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Rogue | Components")
 	TObjectPtr<class UCameraComponent> CameraComponent{ nullptr };
 
+	UPROPERTY(EditDefaultsOnly, Category = Input)
+	TObjectPtr<class UInputAction> MoveAction{ nullptr };
+
+	UPROPERTY(EditDefaultsOnly, Category = Input)
+	TObjectPtr<UInputAction> LookAction{ nullptr };
+
+	void Move(const struct FInputActionValue& Value);
+	// also have FInputActionInstance
+	void Look(const struct FInputActionInstance& Value);
+
 
 private:
 
